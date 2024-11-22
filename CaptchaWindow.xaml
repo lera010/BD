@@ -1,0 +1,14 @@
+﻿<Window x:Class="_3._3pz.CaptchaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3._3pz"
+        mc:Ignorable="d"
+        Title="Введите капчу" Height="300" Width="400">
+    <Grid>
+        <Image x:Name="CaptchaImage" VerticalAlignment="Top" Width="200" Height="150" Margin="100,10,100,0"/>
+        <TextBox x:Name="CaptchaTextBox" Width="200" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="50" FontSize="11"/>
+        <Button Content="Подтвердить" Width="100" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="ConfirmCaptcha_Click"  FontSize="11"/>
+    </Grid>
+</Window>

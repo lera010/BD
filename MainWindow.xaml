@@ -1,0 +1,55 @@
+﻿<Window x:Class="_3._3pz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        xmlns:local="clr-namespace:_3._3pz"
+        mc:Ignorable="d"
+        Title="Услуги" Height="550" Width="1000">
+    <Grid>
+        <DataGrid x:Name="ServiceDataGrid" HorizontalAlignment="Stretch" MinHeight="300" AutoGenerateColumns="False" Margin="10,55,250,20" VerticalAlignment="Stretch" MinWidth="616">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ServiceID}" Header="№"/>
+                <DataGridTextColumn Binding="{Binding ServiceName}" Header="Наименование услуги"/>
+                <DataGridTextColumn Binding="{Binding Description}" Header="Описание"/>
+                <DataGridTextColumn Binding="{Binding Price}" Header="Цена"/>
+                <DataGridTemplateColumn Header="Изображение">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImagePath}" Height="50" Width="50" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ComboBox Name="comboSort" Width="150" Margin="25,20,0,0" SelectionChanged="comboSort_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ComboBoxItem Content="Сортировать по ID" Tag="ID"/>
+            <ComboBoxItem Content="Сортировать по возрастанию цены" Tag="PriceAsc"/>
+            <ComboBoxItem Content="сортировать по убыванию цены" Tag="PriceDesc"/>
+        </ComboBox>
+
+        <TextBox x:Name="ServiceName1" Margin="0,80,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <TextBox x:Name="Description1" Margin="0,125,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <TextBox x:Name="Price1" Margin="0,175,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150" Cursor=""/>
+
+        <Button Content="Добавить" Margin="0,210,30,0" Click="Button_add" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Удалить" Margin="0,250,30,0" Click="Button_delete" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Обновить" Margin="0,290,30,0" Click="Button_update" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+        <Label Content="Наименование" Margin="0,55,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Описание" Margin="0,100,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Цена" Margin="0,150,30,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Сбросить" HorizontalAlignment="Left" Margin="220,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.101,0.004"  Width="150" Click="Button_Click"/>
+        <Button Content="Экспорт" Margin="0,0,30,115" Click="Button_export" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Импорт" Margin="0,0,30,65" Click="Button_import" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="150"/>
+        
+        <Button Content="Управление пользователями   ->" Margin="0,15,30,0" Click="Button_Orders" VerticalAlignment="Top" HorizontalAlignment="Right" Width="250"/>
+        <Button Content="Загрузить изображение" Margin="0,0,10,15" Click="Button_LoadImage" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="190"/>
+
+
+    </Grid>
+</Window>

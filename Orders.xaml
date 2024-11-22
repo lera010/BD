@@ -1,0 +1,41 @@
+﻿<Window x:Class="_3._3pz.Orders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3._3pz"
+        mc:Ignorable="d"
+        Title="Пользователи" Height="550" Width="1000">
+    <Grid>
+        <DataGrid x:Name="OrderDataGrid" HorizontalAlignment="Stretch" MinHeight="350" AutoGenerateColumns="False" Margin="10, 10, 200, 10" VerticalAlignment="Stretch" MinWidth="616">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UserID}" Header="№"/>
+                <DataGridTextColumn Binding="{Binding FullName}" Header="Полное имя"/>
+                <DataGridTextColumn Binding="{Binding Phone}" Header="Номер телефона"/>
+                <DataGridTextColumn Binding="{Binding RoleName}" Header="Роль"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="NameBox" Margin="0,65,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Имя" Margin="0,43,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+        <TextBox x:Name="LastNameBox" Margin="0,114,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Фамилия" Margin="0,92,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+        <TextBox x:Name="PhoneBox" Margin="0,160,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Номер" Margin="0,138,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+        <Label Content="Роль" Margin="0,192,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <ComboBox x:Name="combo2" Margin="0,210,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150">
+            <ComboBoxItem Content="admin" Tag="1"/>
+            <ComboBoxItem Content="user" Tag="2"/>
+        </ComboBox>
+
+        <Button Content="Добавить" Margin="0,315,20,0" Click="AddUser_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Обновить" Margin="0,355,20,0" Click="UpdateUser_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Button Content="Удалить" Margin="0,395,20,0" Click="DeleteUser_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+        <TextBox x:Name="PasswordBox" Margin="0,260,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+        <Label Content="Пароль" Margin="0,247,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150"/>
+
+    </Grid>
+</Window>

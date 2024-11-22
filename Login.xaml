@@ -1,0 +1,15 @@
+﻿<Window x:Class="_3._3pz.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3._3pz"
+        mc:Ignorable="d"
+        Title="Login" Height="250" Width="400">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="400">
+        <Image Source="C:\Users\leray\source\repos\bdbd\brick.ico" HorizontalAlignment="Right" VerticalAlignment="Top" Height="60" Width="60" Margin="10"></Image>
+        <TextBox Name="UsernameTextBox" Width="200" Margin="100,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <PasswordBox Name="PasswordBox" Width="200" Margin="100,120,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" MinWidth="70" Click="LoginButton_Click"/>
+    </Grid>
+</Window>
